@@ -1,55 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>تكبيس البطاطا — Potato Clicker</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تكبيس البطاطا 🥔</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <main class="container">
-<header>
-<h1>تكبيس البطاطا 🥔</h1>
-<p class="subtitle">سجل اسمك (يوزر الديسكورد) واضغط على البطاطا — شوف مين في القائمة!</p>
-</header>
+  <header>
+    <h1>تكبيس البطاطا 🥔</h1>
+    <p class="subtitle">اضغط على البطاطا وشوف مين يتصدر القائمة!</p>
+  </header>
 
+  <!-- تسجيل الدخول -->
+  <section class="login">
+    <input id="nameInput" type="text" placeholder="اكتب اسمك هنا">
+    <button id="loginBtn">دخول</button>
+  </section>
 
-<section class="login">
-<input id="nameInput" type="text" placeholder="أدخل يوزر الديسكورد (مثال: Younes#1234)" maxlength="40">
-<button id="loginBtn">دخول</button>
-<button id="guestBtn" class="muted">دخول كزائر</button>
-</section>
+  <!-- منطقة اللعبة -->
+  <section class="game-area">
+    <div class="potato-wrap">
+      <img id="potato" src="https://i.imgur.com/7l6U5OX.png" alt="Potato">
+    </div>
+    <div class="scorebox">
+      <div>اللاعب: <span id="playerName">—</span></div>
+      <div>نقاطك: <span id="playerScore">0</span></div>
+    </div>
+  </section>
 
+  <!-- إعلان Google -->
+  <section class="ads-section">
+    <!-- ضع كود AdSense هنا -->
+  </section>
 
-<section class="game-area">
-<div class="potato-wrap">
-<img id="potato" src="https://i.imgur.com/7l6U5OX.png" alt="potato">
-</div>
-<div class="scorebox">
-<div>اللاعب: <span id="playerName">—</span></div>
-<div>نقاطك: <span id="playerScore">0</span></div>
-</div>
-</section>
+  <!-- لوحة الترتيب -->
+  <section class="leaderboard">
+    <h2>قائمة الضغطات</h2>
+    <ol id="leaderboardList"></ol>
+  </section>
 
-
-<section class="controls">
-<button id="addBot">أضف أسماء تجريبية</button>
-<button id="resetBtn" class="danger">إعادة ضبط القائمة</button>
-</section>
-
-
-<section class="leaderboard">
-<h2>قائمة الضغطات</h2>
-<ol id="leaderboardList"></ol>
-</section>
-
-
-<footer>
-<small>تم الإنشاء بواسطةك — انسخه وادفعه إلى GitHub</small>
-</footer>
 </main>
-
-
 <script src="script.js"></script>
 </body>
 </html>
