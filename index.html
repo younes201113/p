@@ -7,41 +7,47 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<main class="container">
-  <header>
-    <h1>تكبيس البطاطا 🥔</h1>
-    <p class="subtitle">اضغط على البطاطا وشوف مين يتصدر القائمة!</p>
-  </header>
+<div class="container">
 
   <!-- تسجيل الدخول -->
-  <section class="login">
-    <input id="nameInput" type="text" placeholder="اكتب اسمك هنا">
+  <div class="login">
+    <input type="text" id="playerNameInput" placeholder="اكتب اسمك هنا">
     <button id="loginBtn">دخول</button>
-  </section>
+  </div>
 
-  <!-- منطقة اللعبة -->
-  <section class="game-area">
-    <div class="potato-wrap">
-      <img id="potato" src="https://i.imgur.com/7l6U5OX.png" alt="Potato">
-    </div>
-    <div class="scorebox">
-      <div>اللاعب: <span id="playerName">—</span></div>
-      <div>نقاطك: <span id="playerScore">0</span></div>
-    </div>
-  </section>
+  <!-- منطقة البطاطا -->
+  <div class="game-area">
+    <img id="potato" src="https://i.imgur.com/7l6U5OX.png" alt="بطاطا">
+    <button id="clickBtn">اضغط على البطاطا</button>
+    <div class="score-display">نقاطك: <span id="score">0</span></div>
+  </div>
 
   <!-- إعلان Google -->
   <section class="ads-section">
-    <!-- ضع كود AdSense هنا -->
+    <!-- كود AdSense الرئيسي -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2649889735922333"
+     crossorigin="anonymous"></script>
+
+    <!-- وحدة الإعلان -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-2649889735922333"
+         data-ad-slot="1234567890"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
   </section>
 
-  <!-- لوحة الترتيب -->
-  <section class="leaderboard">
-    <h2>قائمة الضغطات</h2>
+  <!-- لوحة المتصدرين -->
+  <div class="leaderboard">
+    <h2>قائمة المتصدرين</h2>
     <ol id="leaderboardList"></ol>
-  </section>
+  </div>
 
-</main>
+</div>
+
 <script src="script.js"></script>
 </body>
 </html>
